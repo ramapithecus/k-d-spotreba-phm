@@ -2,26 +2,9 @@
 <html>
 <head>
 <title>Kontrola spotreby PHM</title>
+<link type="text/css" rel="stylesheet" href="styleFuel.css ">
 <meta charset="UTF-8">
-<style>
-body {
-  background-color: yellow;
-  text-align:center;
-  color: maroon;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size:18px;
-  }
-  .input{ border: 2px solid red;
-          border-radius:10px;
-          height: 25px;
-          width: 80px;
-          padding: 2px;
-          margin: 10px 15px;
-		  text-align: center;
-  }
- 
-</style>
-
+<script src="index.js"></script>
 </head>
 <body>
 <div>
@@ -29,31 +12,15 @@ body {
 <p> Tabuľka na zápis hodnôt z jazdy a tankovania pre kontrolu spotreby a uloženia do tabuľky</p>
 </div>
 <div>
-<script>
- function f1() {
- var y = document.getElementById('a').value;
- var x = document.getElementById('result');
-    x.innerHTML = y;
-}
- function f2() {
- var y = document.getElementById('b').value;
- var x = document.getElementById('tank');
-    x.innerHTML = y;
-}
-function f3() {
- var y = document.getElementById('x').value;
- var k = document.getElementById('rus');
-    k.innerHTML = y;
-}
-</script>
+
 <form oninput="x.value=(100*b.value/a.value).toFixed(2)" action="/Kód- spotreba PHM.html" method="get" target="blank" autocomplete="off">
 <label for="distance"> Počet najazdených km:</label><!nefach4i to, pockam na php>
-<input type="number"  id="a"  class="input" name="inf" min="0" max="1000" maxlength="6" step="12.3" oninput="f1()">
+<input type="number"  id="a"  class="input" name="inf" min="0" max="1000" maxlength="6" step="0.1" oninput="f1()">
 <span id="result"></span>
 <button> Submit</button> 
 <br>
 <label for="tanking"> Tankovanie PHM v l:</label>
-<input type="number" class="input" id="b" name="inf" oninput="f2()" maxlength="6" min="0" max="500" step="4.2" >
+<input type="number" class="input" id="b" name="inf" oninput="f2()" maxlength="6" min="0" max="500" step="0.1" >
 <span id="tank"></span>
 <br>
 <label for="consumption">  Priemerná spotreba vychádza na:</label>
