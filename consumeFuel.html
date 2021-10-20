@@ -33,7 +33,8 @@
 <br>
 <input output type="number" class="input" id="x" name="inf" for="100*b/a" readonly  onchange="f3()"></output>
 <label for="average">l on 100km </label>
-<span id="rus"></span>
+<span id="rus"></span><br>
+<input type="reset">
 </form> 
 <button onclick="f5()"> Submit a ride</button> 
 <form >
@@ -48,10 +49,9 @@
 </tr><br>
 <tr>
 <td>
-<select name="carsGu" class="input" onclick="f4()">
-<option id="carsList"> 0</option> 
-</select>
-  
+<input name="carsGu" class="input"  onclick="f4()">
+
+<span class="carChooser" id="carsList"></span> 
   </td>
 <td> <input type="text" class="input" placeholder="Uvedťe názov svojho vozidla" pattern="[A-Z]" id="carType"> </td>
 <td> <input type="number" class="input" id="carDistance" readonly name="distance"></td>

@@ -13,6 +13,7 @@ function f3() {
  var y = document.getElementById('x').value;
   var x = document.getElementById('result');
     x.innerHTML = y;
+    console.log(x);
 }
 function clockTick() {
   var currentTime = new Date(),
@@ -37,7 +38,7 @@ cars.forEach(function(element) {
   listOfCars.push("<li>" + element + "</li>");
 });
 
-list.innerHTML = listOfCars.join('');
+list.value = listOfCars.join('<br>');
 
 function f4(){
   document.getElementById("carsList").innerHTML = listOfCars.join(' <br> ');
