@@ -38,7 +38,7 @@ cars.forEach(function(element) {
   listOfCars.push("<li>" + element + "</li>");
 });
 
-list.value = listOfCars.join('<br>');
+list.value = listOfCars.join();
 
 function f4(){
   document.getElementById("carsList").innerHTML = listOfCars.join(' <br> ');
@@ -55,3 +55,7 @@ function f5(){
       r.value = p; 
 }
 
+function mouseLeave(){
+  var x = document.getElementById("carsList");
+  x.innerHTML = "";
+} 

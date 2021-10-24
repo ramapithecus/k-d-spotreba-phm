@@ -27,6 +27,11 @@ body {
 	 border-radius:13px;
 	 padding:8px;
  }
- .carchooser{
-	 list-style-type: decimal;
+ .carChooser{
+	background-color:#0da513! important; 
+ }
+ #carsList{
+ 	background-color: #0da513 !important;
+ 	list-style-type: upper-roman;
+ 	color:#2487dd;
  }
