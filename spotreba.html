@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kontrola spotreby PHM</title>
+<link type="text/css" rel="stylesheet" href="styleFuel.css ">
+<meta charset="UTF-8">
+<meta name="viewport" content=" width = device-width, initial-scale = 1.0">
+<script src="index.js"></script>
+</head>
+<body >
+<div>
+<h1>Kontrola spotreby Vášho vozidla<h1>
+<a  href="consumeFuel.html" target= "_self" >
+<img src="gb.png" alt="Vlajka Veľkej Británie,link na anglickú verziu"  title=" Link na anglickú verziu" height="30px" width="38px">
+ </a>
+<hr><br>
+<p> Tabuľka na zápis hodnôt z jazdy a tankovania pre kontrolu spotreby a uloženia do tabuľky</p>
+<p id="date"></p>
+</div>
+<div>
+
+<form oninput="x.value=(100*b.value/a.value).toFixed(2)"  autocomplete="off">
+<label for="distance"> Počet najazdených km:</label>
+<input type="number"  id="a"  class="input" name="inf" min="0" max="1000" maxlength="6" step="0.1" oninput="f1()">
+<span id="result"></span>
+
+<br>
+<label for="tanking"> Tankovanie PHM v l:</label>
+<input type="number" class="input" id="b" name="inf" oninput="f2()" maxlength="6" min="0" max="500" step="0.1" >
+<span id="tank"></span>
+<br>
+<label for="consumption">  Priemerná spotreba vychádza na:</label>
+<br>
+
+<input output type="number" class="input" id="x" name="average" for="100*b/a" readonly  oninput="f3()"></output>
+<label for="average"><span id="rus"></span>l na 100<em id="km">km</em> </label>
+
+</form> 
+<button  onclick="f5()"> Zapísať jazdu!</button> 
+<form>
+ <table class="druhotina">
+<caption> Tabuľka na zápis hodnôt</caption>
+<tbody><tr>
+<th> Vozidlo</th>
+<th>Model</th>
+<th> Vzdialenosť </th>
+<th> Tankovanie</th>
+<th> Priemer na 100 <em id="km">km</em> </th>
+</tr>
+<tr>
+<td><input type="select"></td>
+<td> <input type="text" placeholder="Uvedťe názov svojho vozidla" pattern="[A-Z,a-z,0-9]"> </td>
+<td> <input type="number" class="input" id="carDistance" readonly  name="distance"></td>
+<<td> <input type="number" class="input" id="carConsum" readonly name="Fuel"></td>
+<td> <input output type="number" class="input" id="carAverage" name="carAver" readonly></output></td>
+</tr>
+</tbody></table>
+
+</div>
+</body>
+</html>

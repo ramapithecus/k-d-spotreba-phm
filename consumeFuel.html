@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fuel consumption calculator</title>
+<link type="text/css" rel="stylesheet" href="styleFuel.css ">
+<meta charset="UTF-8">
+<meta name="viewport" content=" width = device-width, initial-scale = 1.0">
+<script src="index.js"></script>
+</head>
+<body>
+<div >
+<h1>Fuel consumption control of your vehicle<h1>
+<a href="spotreba.html" target= "_self"  >
+<img src="sk.png" alt="Slovak flag, link to slovak version" title="Link to slovak version" height="30px" width="38px" > 
+</a>
+<hr><br>
+<p> Table for writing values based on distance and injecting fuel and saving values to table</p>
+<p id="date"></p>
+</div>
+<div>
+
+<form oninput="x.value=(100*b.value/a.value).toFixed(2)"   autocomplete="off">
+<label for="distance"> Distance traveled in km:</label>
+<input type="number"  id="a"  class="input" name="inf" min="0" max="1000" maxlength="6" step="0.1" oninput="f1()">
+<span id="result"></span>
+
+<br>
+<label for="tanking"> Injecting fuel in l:</label>
+<input type="number" class="input" id="b" name="inf" oninput="f2()" maxlength="6" min="0" max="500" step="0.1" >
+<span id="tank"></span>
+<br>
+<label for="consumption"> Average consumption is :</label>
+<br>
+<input output type="number" class="input" id="x" name="inf" for="100*b/a" readonly  onchange="f3()"></output>
+<label for="average">l on 100km </label>
+<span id="rus"></span><br>
+<input type="reset">
+</form> 
+<button onclick="f5()"> Submit a ride</button> 
+<form >
+ <table class="druhotina">
+<caption> Table for saving values</caption><br>
+<tbody><tr>
+<th> Vehicle</th>
+<th> Name</th>
+<th> Distance </th>
+<th> Fuel</th>
+<th> Average</th>
+</tr><br>
+<tr>
+<td>
+<input name="carsGu" class="input"  onmouseenter="f4()" onmouseleave="mouseLeave()" >
+
+<span class="carChooser" id="carsList"></span> 
+  </td>
+<td> <input type="text" class="input" placeholder="Uvedťe názov svojho vozidla" pattern="[A-Z]" id="carType"> </td>
+<td> <input type="number" class="input" id="carDistance" readonly name="distance"></td>
+<td> <input type="number" class="input" id="carConsum" readonly name="Fuel"></td>
+<td> <input output type="number" class="input" id="carAverage" name="carAver" readonly
+ for="carAverage.value = 100 * carConsum.value / carDistance.value.toFixed(2")"></td>
+ <td><input type="button" value="Save the ride into table"></td>
+ <td><input type="reset"></td>
+</tr>
+</tbody></table>
+</form>
+
+</div>
+</body>
+</html>
